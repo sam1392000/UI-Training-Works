@@ -1,0 +1,104 @@
+/* Header Styles */
+
+.brand,nav{
+    display: inline-block;
+}
+.brand > h1{
+    margin-bottom: 20px;
+    margin-left: 100px;
+    color: orange;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif
+   
+}
+nav{
+    float: right;
+    margin-right: 70px;
+    margin-top: 15px;
+    /* border: 1px solid black; */
+}
+.nav-elements li:last-child{
+    border:1px solid gainsboro;
+    padding: 10px 20px;
+    border-radius: 5px;
+}
+
+.nav-elements li:first-child{
+    color: orange;
+}
+.nav-elements > li{
+    display: inline;
+    margin-left: 40px;
+
+}
+
+
+/* Section styles Starts here */
+
+.left-top-portion > h1{
+    margin-left:100px;
+    margin-top: 90px;
+    font-size: 5rem;
+}
+.left-top-portion > h1 > span{
+    display: block;
+    color: orange;
+}
+.left-top-portion > p {
+    margin-left: 100px;
+}
+.left-top-portion > p > span{
+    display: block;
+    /* display: none; */
+    margin-top: 10px;
+    /* border: 1px solid red;   */
+}
+
+.left-portion{
+    display: inline-block;
+    /* border: 1px solid red; */
+    /* background-color: red; */
+    /* height: 100px; */
+    /* width: 100%; */
+
+}
+.left-bottom-portion > ul{
+    display: inline;
+    width: 100%;
+    /* border: 1px solid black; */
+    height: 100%;
+    margin-left: 60px;
+}
+
+.left-bottom-portion > ul > li > button{
+    margin-top: -20px;
+    padding: 10px 40px;
+    border-radius: 5px;
+    border: none;
+    background-color: orange;
+    color: white;
+    font-weight: bolder;
+}
+
+.left-bottom-portion > ul > li {
+    display: inline;
+}
+.left-bottom-portion > ul > li > img{
+    width: 50px;
+    height: 40px;
+    margin-left: 40px;
+    margin-top: 20px;
+    
+}
+
+/* Image Section */
+.image_part{
+    display: inline;
+    /* border: 1px solid green; */
+    float: right;
+}
+.image_part > img{
+    width: 500px;
+    height:470px;
+    display: inline;
+    /* margin-top: -350px; */
+}
