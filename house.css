@@ -1,0 +1,69 @@
+body{
+    display: flex;
+    width: 100%;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+}
+.container{
+    width: 600px;
+    height: 500px;
+    border-radius: 20px;
+    background-color: lightskyblue;
+    padding-top: 50px;
+    position: relative;
+}
+
+/* .hut{
+    width: 250px;
+    height: 250px;
+    background-color: blue;
+    left: 28%;
+    top:15%;
+    border-bottom-right-radius: 150%;
+    position: absolute;
+    transform: rotate(45deg);
+    border-right:25px solid transparent ;
+} */
+
+.triangle{
+    border-left: 200px solid skyblue;
+	border-right: 200px solid skyblue;
+	border-bottom: 200px solid #0C1559;
+    position: absolute;
+    width: 0px;
+	height: 0px;
+    left: 15%;
+    top: 30px;
+
+    /* margin-top: 0px; */
+}
+
+.lower{
+    width: 300px;
+    position: absolute;
+    bottom: 10;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    height: 200px;
+    margin-left: 24%;
+    margin-top: 30%;
+    background-color: #0C1559;
+}
+.window{
+    width: 70%;
+    height: 30px;
+    background-color: orange;
+    margin-top: 5px;
+    border-radius: 30px;
+}
+.door{
+    width: 100px;
+    height: 100px;
+    background-color: orange;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+
+}

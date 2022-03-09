@@ -1,0 +1,91 @@
+body{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.container{
+    width: 500px;
+    height: 400px;
+    background-color: yellow;
+    position: relative;
+}
+
+.rectangle{
+    width: 32px;
+    height: 100px;
+    background-color: black;
+    border-radius: 100px;
+}
+.little{
+    right:0;
+    position: absolute;
+    top:30%;
+    bottom: 70%;
+    right:31%;
+    height: 63px;
+    width: 35px;
+    /* background-color: pink; */
+    border-radius: 100px;
+}
+.little_prev{
+  
+    right:0;
+    position: absolute;
+    width: 35px;
+    /* background-color: green; */
+    right:40%;
+    height: 80px;
+    top:26%;
+}
+.middle{
+    right:0;
+    position: absolute;
+    top:20%;
+    width: 35px;
+    bottom: 70%;
+    right:49%;
+    /* background-color: red; */
+    height: 95px;
+}
+.fore{
+    top:24%;
+    position: absolute;
+    left:36%;
+    height: 80px;
+    /* background-color: aqua; */
+}
+.thumb{
+    position: absolute;
+    left:5%;
+    height: 110px;
+    top:-89%;
+    border: 10px solid yellow;
+    /* background-color: aquamarine; */
+    bottom: 30%;
+    transform: rotate(60deg);
+    /* transform: translateX(-30%);
+    transform: translateY(-30%); */
+
+}
+.palm{
+    width: 180px;
+    height: 70px;
+    position: absolute;
+    top: 48%;
+    left:33%;
+    border-radius: 0px;
+    border-bottom-right-radius: 30px;
+    border-bottom-left-radius: 30px;
+}
+.wrist{
+    width: 90px;
+    border-radius: 0px;
+    position: absolute;
+    top:65%;
+    border-bottom-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+    left:43%;
+    height: 75px;
+}
