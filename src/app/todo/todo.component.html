@@ -1,0 +1,16 @@
+<h1 class="heading">Todo in Angular</h1>
+<div class="input_div">
+    <input type="text" class="input-box" [(ngModel)] ="todoValue" >
+    <button class="submit" (click) = "addTodo()" (kepup.enter)="addTodo()">Submit</button>
+</div>
+
+<div class="displayTodo">
+  <div class="list-item" *ngFor="let item of list" [ngClass]="{'done':item.status}">
+  <app-list-component [item] = "item.todo"></app-list-component>
+  <div class="btn-group">
+    <button (click) = "makeAsDone(item.id)">></button>
+    <button (click) = "deleteTodo(item.id)">X</button>
+  </div>
+  </div>
+</div>
+  

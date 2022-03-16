@@ -1,0 +1,76 @@
+.heading{
+    margin-left: 32%;
+    color:  dodgerblue;
+}
+.input_div{
+    width: 60%;
+    height: 50px;
+    margin: 0px auto;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    margin-top: 5%;
+}
+
+.input-box{
+    width: 30em;
+    height: 2em;
+    border-radius: 30px;
+    border: 2px solid cornflowerblue;
+    margin: 0px auto;
+    padding-left: 20px;
+
+}
+.submit{
+    width: 100px;
+    margin-right: 130px;
+    background-color: cornflowerblue;
+    height: 30px;
+    border-radius: 10px;
+    border: none;
+    color: white;
+}
+.list-item{
+    width: 30em;
+    border: 1px solid  lightskyblue;
+    height: 2em;
+    margin-left: 25%;
+    margin-top: 30px;
+    padding: 0px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-width: 2px;
+    border-color: lightgrey;
+    border-top-color: red;
+
+}
+.btn-group{
+    width: 70px;
+    display: flex;
+    justify-content: space-between;
+
+}
+.btn-group button:first-child{
+    background-color: #90EE90;
+    color: white;
+    width: 30px;
+    height: 30px;
+    border-radius: 100%;
+    border: none;
+}
+.btn-group button:nth-child(2){
+    background-color: red;
+    color: white;
+    width: 30px;
+    height: 30px;
+    border-radius: 100%;
+    border: none;
+}
+.done{
+    
+    border-width: 2px;
+    border-color: lightgrey;
+    border-top-color: #90EE90;
+   
+}
