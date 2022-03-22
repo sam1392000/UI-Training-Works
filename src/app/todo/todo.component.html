@@ -5,8 +5,9 @@
         <a (click)="onSelect('professional')">Professional</a>
         <a (click)="onSelect('shopping')">Shopping</a>
     </div>
+    <pre> {{list2 | json}}  </pre>
     <div class="alltodos">
-        <div  class="todo" *ngFor="let item of list; let i = index" [ngClass]="{'done' : item.status}">
+        <div  class="todo" *ngFor="let item of list2; let i = index" [ngClass]="{'done' : item.status}">
             
             <h1>{{item.title}} </h1> 
             <p><span>Description:</span>{{item.description}}</p>

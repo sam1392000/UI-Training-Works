@@ -29,7 +29,7 @@ export class TodocategoryComponent implements OnInit {
   }
 
   markAsDone(id:string){
-    this.todoService.markAsDone(id);
+    // this.todoService.markAsDone(id);
 }
 deleteTodo(id:string){
    this.todoService.removeTodo(id);

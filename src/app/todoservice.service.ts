@@ -39,33 +39,37 @@ export class TodoserviceService {
   }
 
   //
-  retrieveAllTodos():Todo[]{
+  // retrieveAllTodos():Todo[]{
     // console.log(typeof this.list)
     // this.subjectSource.next(this.list)
     // return this.list;
 
-    let allTodo:Todo[]=[] 
-    this.http.get<Todo[]>(`${this._URL}.json`)
-    .pipe(
-      map((response) => {
-         let todos = [];
-        console.log(response + " is the response")
-        for(let key in response){
-          todos.push({...response[key],key})
-        }
-        console.log(response)
-        allTodo = todos
-        return todos
-      })
-    )
+    // let allTodo:Todo[]=[] 
+    // this.http.get<Todo[]>(`${this._URL}.json`)
+    // .pipe(
+    //   map((response) => {
+    //      let todos = [];
+    //     console.log(response + " is the response")
+    //     for(let key in response){
+    //       todos.push({...response[key],key})
+    //     }
+    //     console.log(response)
+    //     allTodo = todos
+    //     return todos
+    //   })
+    // )
     // .subscribe((res) => {
     //   allTodo = res
     //   console.log(res)
     // })
-    return allTodo;
+    // return allTodo;
     
-   this.subjectSource.next(this.list);
-  // return this.list;
+  //  this.subjectSource.next(this.list);
+  // // return this.list;
+  // }
+
+  getAllTodos(){
+    return this.http.get<Todo[]>(`${this._URL}.json`)
   }
 
   removeTodo(id:string){
@@ -75,23 +79,15 @@ export class TodoserviceService {
     // this.subjectSource.next(this.list)
     // // this.subjectSource.next(this.list)
     // return this.list;
-    this.http.delete(`${this._URL}/${id}.json`).subscribe((res) => {
-      console.log("Remove function called")
-      this.retrieveAllTodos()
-    })
+    return this.http.delete(`${this._URL}/${id}.json`)
   }
   
-  markAsDone(id:string){
-    
-    //  this.list.map(data => {
-    //   if(data.id == id){
-    //     data.status = true
-    //     this.subjectSource.next(this.list)
-    //   }
-    // })
-    // console.log(this.list)
-    // this.subjectSource.next(this.list)
-    
+  markAsDone(todo:any){
+      console.log(todo)
+      todo.status = true;
+      let key_id = todo.key;
+      delete todo.key;
+      return this.http.put(`${this._URL}/${key_id}.json`,todo)
   }
 
 }
