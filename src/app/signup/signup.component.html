@@ -1,0 +1,57 @@
+
+<div class="container">
+
+    <h2 class="text-center font-weight-bold"> Join us Here :)</h2>
+
+
+    <form [formGroup]= "registrationForm">
+        <div class="form-group">
+            <label>Name</label>
+            <input type="text" [class.is-invalid]= "form['name'].invalid && form['name'].touched" formControlName="name" class="form-control"  placeholder="Enter Name">
+        </div>
+        <!-- Error Codes -->
+          <div *ngIf= "form['name'].invalid && form['name'].touched">
+            <small *ngIf= "form['name'].errors?.['required']" class="text-danger">username is required</small>
+            <small *ngIf= "form['name'].errors?.['minlength']" class="text-danger">userName must be atleast 2 character</small>
+          </div>
+        <!-- ========================================== -->
+        <div class="form-group">
+          <label>Email address</label>
+          <input type="email"  formControlName="email"  class="form-control"  placeholder="Enter email" [class.is-invalid]= "form['email'].invalid && form['email'].touched">
+        </div>
+        
+         <!-- Error Codes -->
+        <div *ngIf= "form['email'].invalid && form['email'].touched">
+            <small *ngIf= "form['email'].errors?.['required']" class="text-danger">mail id is required</small>
+            <small *ngIf= "form['email'].errors?.['email']" class="text-danger"> Please enter valid mail address</small>
+          </div>
+        <!-- ========================================== -->
+
+        <div class="form-group">
+          <label >Password</label>
+          <input type="password" formControlName="password" class="form-control"  placeholder="Password" [class.is-invalid]= "form['password'].invalid && form['password'].touched">
+        </div>
+        
+         <!-- Error Codes -->
+         <div *ngIf= "form['password'].invalid && form['password'].touched">
+            <small *ngIf= "form['password'].errors?.['required']" class="text-danger">Password is required</small>
+            <small *ngIf= "form['password'].errors?.['pattern']" class="text-danger"> Password should have have at least one special character and one number and min length of 8</small>
+          </div>
+        <!-- ========================================== -->
+
+
+        <div class="form-group">
+            <label>Confirm Password</label>
+            <input type="password"  formControlName="confirmPassword" class="form-control"  placeholder="Confirm Password"
+            [class.is-invalid]= "registrationForm.errors?.['mismatch']"
+            >
+          </div>
+        <p *ngIf= "registrationForm.errors?.['mismatch']" class="text-danger">Password mismatch</p>
+
+
+
+        <button type="submit" class="btn btn-primary" [disabled]= "form['name'].invalid || form['email'].invalid || form['password'].invalid || form['confirmPassword'].invalid" >Submit</button>
+      </form>
+</div>
+
+<pre>{{registrationForm.value | json}}</pre>

@@ -1,0 +1,13 @@
+<h1>Todo under {{category}}  Category</h1>
+
+<div class="alltodos">
+    <div  class="todo" *ngFor="let item of todoList;let i = index" [ngClass]="{'done' : item.status}">
+        <h1>{{item.title}} </h1> 
+        <p><span>Description:</span>{{item.description}}</p>
+        <p><span>Category:</span>{{item.category}} </p>
+        <p><span>Due:</span>{{item.date}}</p>
+        <!-- <button class="btn success" (click)="markAsDone(item.id)">Done</button>
+        <button class="btn danger" (click)="deleteTodo(item.id)">delete</button> -->
+    </div>
+    
+</div>

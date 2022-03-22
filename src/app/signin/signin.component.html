@@ -1,0 +1,40 @@
+
+<div class="container-fluid mt-4" >
+    <h3>Signin Here!</h3>
+    <form #signinForm="ngForm">
+        <div class="form-group">
+          <label >Email address</label>
+          <input 
+            type="email" 
+            #email="ngModel"
+            required
+            [class.is-invalid] = "(email.invalid && email.touched)"
+            placeholder="Enter email" 
+            name="email" 
+            class="form-control"
+            [(ngModel)] = "signIn.email">
+        </div>
+        <p [class.d-none] = "!(email.invalid && email.touched)" [style.color]="'red'" >Please enter your email</p>
+       
+        <div class="form-group">
+          <label for="exampleInputPassword1">Password</label>
+          <input 
+            type="password" 
+            class="form-control" 
+            id="exampleInputPassword1"
+            #password="ngModel"
+            required 
+            pattern="(?=.*?[0-9])(?=.*?[#?!@$%^&*-]).{8,}$"
+            [class.is-invalid] = "password.invalid && password.touched"
+            placeholder="Password" 
+            name="password" 
+            [(ngModel)] = "signIn.password">
+        </div>
+        <p *ngIf="password.errors?.['pattern']" class="text-danger">Password should have at least one special character and one number and min length of 8</p>
+        <p [class.d-none] = "!(password.invalid && password.touched)" [style.color]="'red'" >Please enter your Password</p>
+        <button type="submit" [disabled]= "(email.pristine && email.invalid)|| (password.invalid && password.pristine)"  class="btn btn-primary">Submit</button>
+      </form>
+      <pre>{{signinForm.value | json}}</pre>
+      <pre>{{signIn | json}}</pre>
+</div>
+

@@ -1,0 +1,47 @@
+.alltodos{
+    border: 1px solid black;
+    margin-top: 30px;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    height: 500px;
+}
+.todo{
+    width: 250px;
+    height: 250px;
+    border:1px solid whitesmoke;
+    margin-left: 50px;
+    margin-top: 20px;
+    border-radius: 5px ;
+    border: 2px solid black;
+    border-color: lightgrey;
+    border-top-color: red;
+    background-color: white;
+    padding-left: 30px;
+    box-shadow: lightgray;
+}
+
+span{
+    font-weight: bolder;
+    margin-right: 20px;
+}
+.success{
+    background-color: green;
+    color: whitesmoke;
+}
+.danger{
+    background-color: red;
+    color: white;
+}
+.btn{
+    margin-left: 20px;
+    padding: 5px 15px;
+    border: none;
+}
+.done{    
+    border-width: 2px;
+    border-color: lightgrey;
+    border-top-color: #90EE90;
+   
+}

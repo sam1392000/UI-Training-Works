@@ -1,0 +1,26 @@
+<div class="form">
+    <button><a routerLink="/alltodo">Back</a></button>
+    <h1>Add Task Here...</h1>
+    <input type="text" 
+            placeholder="Enter Title..." 
+            class="title_input"
+            [(ngModel)]="title"
+            >
+    <input 
+        type="text" 
+        placeholder="Enter Description..." 
+        class="description_input"
+        [(ngModel)]="description"
+        >
+    <div class="checkbox">
+        <input type="checkbox" name="checkbox1" value="shopping" id="shopping" (change)="onChange('shopping')"/> 
+        <label for="shopping">Shopping</label>
+        <input type="checkbox" name="checkbox2" value="personal" id="personal" (change)="onChange('personal')"
+        >
+        <label for="personal">Personal</label>
+        <input type="checkbox" name="checkbox3" value="Professional" id="professional" (change)="onChange('professional')">
+        <label for="professional">Professional</label>
+    </div>
+    <input type="date" [(ngModel)]="date">
+    <button (click)="addTask()">Add Task</button>
+</div>

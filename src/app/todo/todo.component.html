@@ -1,0 +1,28 @@
+<!-- <p>{{name | vowelCaps}}</p> -->
+<div class="container">
+    <div class="category">
+        <a (click)="onSelect('personal')">Personal</a>
+        <a (click)="onSelect('professional')">Professional</a>
+        <a (click)="onSelect('shopping')">Shopping</a>
+    </div>
+    <div class="alltodos">
+        <div  class="todo" *ngFor="let item of list; let i = index" [ngClass]="{'done' : item.status}">
+            
+            <h1>{{item.title}} </h1> 
+            <p><span>Description:</span>{{item.description}}</p>
+            <p><span>Category:</span>{{item.category}} </p>
+            <p><span>Due:</span>{{item.date}}</p>
+            <!-- <p>{{}}</p> -->
+            <button class="btn success" (click)="markAsDone(i)">Done</button>
+            <button class="btn danger" (click)="deleteTodo(item.key)">delete</button>
+            <!-- <button class="btn" (click)="childRouteDemo()">delete</button> -->
+        </div>
+        
+    </div>
+</div>
+<!-- *ngFor="let item of list" -->
+<!-- <h1>{{item.title}} || sam</h1> 
+           <p>{{item.description}} || sam</p>
+           <p>{{item.category}} || sam</p>
+           <p>{{item.date}} || sam</p> -->
+<router-outlet></router-outlet>

@@ -1,0 +1,70 @@
+.container{
+    border: 1px solid black;
+    /* height: 500px; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #F5F5F5;
+}
+.category{
+    display: flex;
+    justify-content: space-evenly;
+    font-size: large;
+    text-decoration: none;
+    width: 500px;
+   margin-top: 20px;
+}
+.category > a{
+    text-decoration: none;
+    color: white;
+    background-color: fuchsia;
+    padding: 3px 10px;
+    border-radius: 10px;
+}
+.alltodos{
+    border: 1px solid black;
+    margin-top: 30px;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    height: 500px;
+}
+.todo{
+    width: 250px;
+    height: 250px;
+    border:1px solid whitesmoke;
+    margin-left: 50px;
+    margin-top: 20px;
+    border-radius: 5px ;
+    border: 2px solid black;
+    border-color: lightgrey;
+    border-top-color: red;
+    background-color: white;
+    padding-left: 30px;
+    box-shadow: lightgray;
+}
+
+span{
+    font-weight: bolder;
+    margin-right: 20px;
+}
+.success{
+    background-color: green;
+    color: whitesmoke;
+}
+.danger{
+    background-color: red;
+    color: white;
+}
+.btn{
+    margin-left: 20px;
+    padding: 5px 15px;
+    border: none;
+}
+.done{    
+    border-width: 2px;
+    border-color: lightgrey;
+    border-top-color: #90EE90;
+   
+}
