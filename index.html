@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aria Website</title>
+    <script src="./index.js"></script>
+    <style>
+        body{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            width: 100%;
+            position: relative;
+        }
+        .input{
+            width: 400px;
+            height: 20px;
+            /* margin-bottom: 10px; */
+            font-size: 16px;
+        }
+        .link{
+            margin-left: 100px;
+        }
+        .signin{
+            width: 410px;
+            /* margin-bottom: 10px; */
+            background-color: dodgerblue;
+            color: white;
+            border: none;
+            margin-top: 10px;
+            height: 30px;
+        }
+
+        input:hover{
+            outline-style: dashed;
+        }
+        .p-div{
+            padding: 10px 50px;
+            background-color: dodgerblue;
+            color: white;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            font-weight: 700;
+            /* display: inline; */
+            width: fit-content;
+            display: none;
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+        span{
+            margin-left: 20px;
+            font-size: 1.5em;
+        }
+        span:hover{
+            cursor: pointer;
+        }
+        .btn{
+            width: fit-content;
+            margin-top: 10px;
+        }
+        .label{
+            color: dodgerblue;
+        }
+        .fontsize1{
+            position: absolute;
+            top: 0;
+            right: 350px;
+            background-color: dodgerblue;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+        }
+        .fontsize2{
+            position: absolute;
+            top: 0;
+            right: 10;
+            background-color: dodgerblue;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+        }
+        
+    </style>
+
+    <script>
+        function makeFontBigger(){
+            var el = document.getElementById("form")
+            var style = window.getComputedStyle(el, null).getPropertyValue('font-size');
+            var fontSize = parseFloat(style); 
+
+            el.style.fontSize = (fontSize + 2) + 'px';
+        }
+
+        function makeFontSmaller(){
+            var el = document.getElementById("form")
+            var style = window.getComputedStyle(el, null).getPropertyValue('font-size');
+            var fontSize = parseFloat(style); 
+            console.log('makeFontSmaller called...')
+            el.style.fontSize = (fontSize - 2) + 'px';
+        }
+        document.addEventListener('keyup', event => {
+            if (event.code === 'Space') {
+                console.log("space clicked")
+                document.getElementById("skip").style.display = 'block'
+               
+
+            }
+        })
+
+       function popup(){
+        console.log("x clicked....")
+            document.getElementById("skip").style.display = 'none'
+       }
+    </script>
+
+
+</head>
+<body>
+    <form id ="form">
+        <h3 class="label">Email:</h3>
+        <input type="text" name="username" id="username" class="input" placeholder="please enter your UserName" aria-required="true" required> 
+        <h3 class="label">Password</h3> 
+        <input type="password" name="password" id="password" class="input" placeholder="Please enter your password"  aria-required="true" required> <br>
+        <button class="signin">Signin</button> <br>
+       <a href="#" class="link" aria-describedby="Please click the link to Change password" aria-label="Please click the link to Change password">Forget password?</a> <br>
+       
+    </form>
+    <button class="fontsize1" onclick="makeFontBigger()">Text increase</button>
+    <button class="fontsize2" onclick="makeFontSmaller()">Text Decrease</button> 
+    <div class="p-div" id="skip"  tabindex="-1">
+        <p>Skip to main Content   <span onclick="popup()">x</span></p>
+    </div>
+</body>
+</html>
